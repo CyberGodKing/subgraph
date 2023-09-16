@@ -26,7 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('student/login', views.LoginStudent, name="studentlogin" ),
     path('AdMinManager/access/lock/login', Admin.LoginAdmin, name="Adminlogin" ),
-    path('staff/login', staff.LoginStaff, name="Stafflogin" ),
+    path('staff/login', views.LoginStudent, name="Stafflogin" ),
     path('signup', views.signup, name="signup" ),
     path('../', Admin.log_outAdmin, name="Adminlogout" ),
     path('.../', staff.log_outStaff, name="Stafflogout" ),

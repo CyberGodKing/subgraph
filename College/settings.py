@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-29%25-^&h5zo4!3s4@4zp+pcf7t+gxymc@@lx&4j!5t1=ps04$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["hooebrokerweb.onrender.com",'localhost','127.0.0.1']
-RENDER_EXTERNAL_HOSTNAME = 'hooebrokerweb.onrender.com'
+ALLOWED_HOSTS = ["subgraph-implementation.onrender.com",'localhost','127.0.0.1']
+RENDER_EXTERNAL_HOSTNAME = 'subgraph-implementation.onrender.com'
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
@@ -137,3 +137,4 @@ DATABASES={
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 GRAPHENE = { "SCHEMA": "graphQL.schema.schema" }
+CSRF_TRUSTED_ORIGINS = ["https://subgraph-implementation.onrender.com"]

@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-29%25-^&h5zo4!3s4@4zp+pcf7t+gxymc@@lx&4j!5t1=ps04$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["subgraph-implementation.onrender.com",'localhost','127.0.0.1']
 RENDER_EXTERNAL_HOSTNAME = 'subgraph-implementation.onrender.com'

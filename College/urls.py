@@ -25,7 +25,7 @@ from College.schema import schema
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('student/login', views.LoginStudent, name="studentlogin" ),
+    path('newUser/login', views.LoginStudent, name="studentlogin" ),
     path('AdMinManager/access/lock/login', Admin.LoginAdmin, name="Adminlogin" ),
     path('staff/login', views.LoginStudent, name="Stafflogin" ),
     path('signup', views.signup, name="signup" ),

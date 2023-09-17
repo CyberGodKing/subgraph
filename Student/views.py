@@ -96,7 +96,7 @@ def log_outStudent(request):
 def Dashboard(request):
     if request.user.is_authenticated == True:
         i=1
-        """result = run_query(query)
+        result = run_query(query)
         for obj in result["data"].values():
             for i in range(1,7):
                 #pprint(obj[i]['id'])
@@ -119,7 +119,7 @@ def Dashboard(request):
                                                         reserveFactor=obj[i]['reserveFactor'],
                                                         underlyingPriceUSD=obj[i]['underlyingPriceUSD']
                                                     )
-                populateDB.save()"""
+                populateDB.save()
         data = CompoundV.objects.all()
         for dates in data:
             tnow = datetime.datetime.now()

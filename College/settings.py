@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -127,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
-STATIC_ROOT = BASE_DIR/"staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 DATABASES={
     'default':dj_database_url.parse("postgres://graphql_hywj_user:Kf6Aknm3wyib1dTNhaFB9lHgEf2Z1Ge6@dpg-ck32jr36fquc7385nt10-a.oregon-postgres.render.com/graphql_hywj",conn_max_age=500)

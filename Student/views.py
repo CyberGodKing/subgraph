@@ -97,7 +97,7 @@ def log_outStudent(request):
 
 
 def Dashboard(request):
-    if request.user.is_authenticated == True:
+    if request.user.is_authenticated == False:
         i=1
         result = run_query(query)
         for obj in result["data"].values():

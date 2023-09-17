@@ -14,6 +14,9 @@ import requests,time,datetime
 from .models import StudentContact
 from .models import StudentContact,CompoundV
 
+def custom_404(request, exception):
+    return render(request, 'login.html', status=404)
+    
 def run_query(q):
     request = requests.post('https://api.thegraph.com/subgraphs/name/graphprotocol/compound-v2'
                             '',

@@ -36,4 +36,4 @@ urlpatterns = [
     path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema)),name="graphql"),
 
 ]
-handler404 = views.custom_404
+

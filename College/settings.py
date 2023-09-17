@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-29%25-^&h5zo4!3s4@4zp+pcf7t+gxymc@@lx&4j!5t1=ps04$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["subgraph-implementation.onrender.com",'localhost','127.0.0.1']
 RENDER_EXTERNAL_HOSTNAME = 'subgraph-implementation.onrender.com'
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "Staff",
     "Admin",
     "graphene_django",
+    "phonenumber_field",
 ]
 
 MIDDLEWARE = [
@@ -127,10 +128,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 
+# https://docs.djangoproject.com/en/4.2/howto/static-files/
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
-STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = BASE_DIR/"staticfiles"
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 DATABASES={
     'default':dj_database_url.parse("postgres://graphql_hywj_user:Kf6Aknm3wyib1dTNhaFB9lHgEf2Z1Ge6@dpg-ck32jr36fquc7385nt10-a.oregon-postgres.render.com/graphql_hywj",conn_max_age=500)
 }

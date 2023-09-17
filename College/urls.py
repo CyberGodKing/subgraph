@@ -19,6 +19,8 @@ from django.urls import path
 from Student import views #as student
 from Admin import views as Admin
 from Staff import views as staff
+from django.conf import settings
+from django.conf.urls.static import static
 from graphene_django.views import GraphQLView
 from django.views.decorators.csrf import csrf_exempt
 from College.schema import schema
@@ -35,5 +37,5 @@ urlpatterns = [
     path('dashboard/', views.Dashboard, name="dashboard" ),
     path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema)),name="graphql"),
 
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

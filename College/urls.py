@@ -22,7 +22,7 @@ from Staff import views as staff
 from graphene_django.views import GraphQLView
 from django.views.decorators.csrf import csrf_exempt
 from College.schema import schema
-handler404 = 'Student.views.custom_404'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('student/login', views.LoginStudent, name="studentlogin" ),
@@ -36,3 +36,4 @@ urlpatterns = [
     path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema)),name="graphql"),
 
 ]
+handler404 = views.custom_404

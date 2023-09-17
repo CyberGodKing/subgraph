@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "Admin",
     "graphene_django",
     "phonenumber_field",
+    "requests",
 ]
 
 MIDDLEWARE = [
